@@ -7,7 +7,7 @@ public class Ejercicio5 {
 
         System.out.println("Ingrese el nombre de su mascota");
         Scanner nombre = new Scanner (System.in);
-        nombre_mascota = nombre.next();
+        nombre_mascota = nombre.nextLine();
 
         System.out.println("Ingrese la edad que tiene su mascota");
         Scanner anios = new Scanner(System.in);
@@ -15,11 +15,11 @@ public class Ejercicio5 {
 
         System.out.println("Ingrese la raza de la mascota");
         Scanner ra_za = new Scanner (System.in);
-        raza = ra_za.next();
+        raza = ra_za.nextLine();
 
         System.out.println("Ingrese el nombre completo del dueño de la mascota");
         Scanner duenio = new Scanner (System.in);
-        nombre_duenio = duenio.next();
+        nombre_duenio = duenio.nextLine();
 
         System.out.println(nombre_mascota + " es un/a " + raza + " el/la cual tiene " + edad_mascota + " años" + " y " + nombre_duenio + " es actualmente su dueño/a");
     }
