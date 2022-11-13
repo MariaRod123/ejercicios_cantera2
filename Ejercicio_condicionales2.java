@@ -5,9 +5,8 @@ public class Ejercicio_condicionales2 {
     public static void main(String[] args) {
 
         String usuario, pelicula, anotacion;
-        int opcion_anotacion;
-        int opcion;
-
+        int opcion, opcion_anotacion;
+       
         Scanner nombre = new Scanner(System.in);
         System.out.println("Ingrese su nombre de usuario");
         usuario = nombre.nextLine();
