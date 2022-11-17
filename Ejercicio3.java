@@ -8,16 +8,16 @@ public class Ejercicio3 {
 
         System.out.println("Escriba su nombre");
         Scanner input = new Scanner (System.in);
-        nombre=input.next();
+        nombre=input.nextLine();
 
         System.out.println("Escriba su apellido");
-        apellido= input.next();
+        apellido= input.nextLine();
 
         System.out.println("Escriba en nombre de su madre");
-        nombre_madre= input.next();
+        nombre_madre= input.nextLine();
 
         System.out.println("Escriba el nombre de su padre");
-        nombre_padre= input.next();
+        nombre_padre= input.nextLine();
 
 
         System.out.println("Yo " + nombre + " " + apellido + " soy hija de " + nombre_madre +  " y "  + nombre_padre);
