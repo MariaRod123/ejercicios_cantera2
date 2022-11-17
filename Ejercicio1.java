@@ -7,10 +7,10 @@ public class Ejercicio1 {
         
         System.out.println("Ingrese su nombre");
         Scanner input = new Scanner (System.in);
-        nombre=input.next();
+        nombre=input.nextLine();
 
         System.out.println("Ingrese su apellido");
-        apellido= input.next();
+        apellido= input.nextLine();
 
         System.out.println("Su nombre es:" + nombre + "\nSu apellido es: " + apellido);
 
