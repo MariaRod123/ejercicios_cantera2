@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class EjercicioFunciones2 {
 
-    //definir funcion registrar vehiculo
+    //funcion registrar vehiculo
     public static void Registro_vehiculo(String placa,
                                          String marca,
                                          String nomb_duenio,
@@ -12,7 +12,7 @@ public class EjercicioFunciones2 {
                                          String[] telefonos) {
 
         for (int i = 0; i < 5; i++) {
-            if (placas[4] == null && marcas[4] == null && duenios[4] == null && telefonos[4] == null) {
+            if (placas[i] == null && marcas[i] == null && duenios[i] == null && telefonos[i] == null) {
 
                 System.out.println("Ingrese placa del auto: ");
                 Scanner input = new Scanner(System.in);
@@ -28,16 +28,20 @@ public class EjercicioFunciones2 {
                 tel = input.nextLine();
 
                 System.out.println("Datos ingresados: " + placa + " | " + marca + " | " + nomb_duenio + " | " + tel);
-                placas[4] = placa;
-                marcas[4] = marca;
-                duenios[4] = nomb_duenio;
-                telefonos[4] = tel;
+                placas[i] = placa;
+                marcas[i] = marca;
+                duenios[i] = nomb_duenio;
+                telefonos[i] = tel;
             }
-            System.out.println("Vehiculos registrados : " +  placas[i] + " | " + marcas[i] + " | " + duenios[i] + " | " + telefonos[i]);
+            System.out.println("Vehiculos registrados : " +  placas[0] + " | " + marcas[0] + " | " + duenios[0] + " | " + telefonos[0]);
+            System.out.println("Vehiculos registrados : " +  placas[1] + " | " + marcas[1] + " | " + duenios[1] + " | " + telefonos[1]);
+            System.out.println("Vehiculos registrados : " +  placas[2] + " | " + marcas[2] + " | " + duenios[2] + " | " + telefonos[2]);
+            System.out.println("Vehiculos registrados : " +  placas[3] + " | " + marcas[3] + " | " + duenios[3] + " | " + telefonos[3]);
+            System.out.println("Vehiculos registrados : " +  placas[4] + " | " + marcas[4] + " | " + duenios[4] + " | " + telefonos[4]);
         }
     }
 
-    // Consulta sobre lugares disponibles
+    
     public static void Buscar_disponibilidad(String[] lugares) {
         for (int i = 0; i < lugares.length; i++) {
             if (lugares[i] == null) {
@@ -48,35 +52,32 @@ public class EjercicioFunciones2 {
         }
     }
 
-    public static void Buscar_vehiculo(String valor, String placa, String[] placas) {
+    public static void Buscar_vehiculo(String valor, String placa, String[] lugares) {
 
         System.out.println("Escriba el número de placa de su vehiculo");
         Scanner entrada = new Scanner(System.in);
         valor = entrada.nextLine();
 
         for (int i = 0; i < 5; i++) {
-            if (placas[i].equals(valor)) {
+            if (lugares[i].equals(valor)) {
                 System.out.println("vehiculo: " + valor + " está en el lugar " + (i + 1));
             } else {
                 System.out.println("La placa ingresada " + valor + " no se encuentra en el lugar: " + (i + 1));
             }
         }
     }
-
-    //Hacer funcion para retirar vehiculo del estacionamiento 
+    
     static void Retirar_vehiculo(String placa, String lugares[]){
         System.out.println("Escriba la placa del vehiculo a retirar");
         Scanner enter=new Scanner(System.in);
         placa=enter.nextLine();
 
         for (int i = 0; i <5 ; i++) {
-            if(lugares[3]!=null){
-                lugares[3]=null;
-                System.out.println("Actualización de lugares disponibles: " + lugares[3]);
-
+            if(lugares[i]!=null){
+                lugares[i]=null;
+                System.out.println("Actualización de lugares disponibles: " + lugares[i]);
             }
-
-
+            
         }System.out.println("Se retirar el coche de placa : " + placa);
     }
 
@@ -87,7 +88,7 @@ public class EjercicioFunciones2 {
             salir = true;
             System.out.println("Saliendo...");
         } else if (opc_salir == 2) {
-            salir = false;
+            salir=false;
         }
     }
 
@@ -95,11 +96,11 @@ public class EjercicioFunciones2 {
         //variables
         String valor = " ";
         String placa = "", marca = "", nomb_duenio = "", tel = "";
-        String[] placas = {"lkj231", "mbr568 ", "aax123", " plq251", null};
-        String[] marcas = {"toyota", "kia", "chevrolet", "landrover ", null};
-        String[] duenios = {"Graciela Perez", "Lorenzo Miranda", "Rita Lanza", "Pablo Lopez", null};
-        String[] telefonos = {"401236 ", "212103", " 454502", " 951263", null};
-        String[] lugares = {"aax123", null, "mbr568", null, null};
+        String[] placas = new String [5];
+        String[] marcas = new String [5] ;
+        String[] duenios = new String [5];
+        String[] telefonos = new String [5];
+        String[] lugares = new String [5];
         int elegir=1;
 
         while (elegir != 5) {
@@ -120,7 +121,7 @@ public class EjercicioFunciones2 {
                     break;
 
                 case 3:
-                    Buscar_vehiculo(valor, placa, placas);
+                    Buscar_vehiculo(valor, placa, lugares);
                     break;
 
                 case 4:
@@ -139,7 +140,6 @@ public class EjercicioFunciones2 {
         }
     }
 }
-
 
 
 
